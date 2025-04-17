@@ -172,14 +172,7 @@ var ToggleControls = function (_a) {
         className
     ].filter(Boolean).join(' ');
     var handleChange = function (e) {
-        if (!onChange)
-            return;
-        if (type === 'radio') {
-            // For radio buttons, we want to call onChange with true when selected
-            onChange(true);
-        }
-        else {
-            // For toggle and checkbox, use the checked value
+        if (onChange) {
             onChange(e.target.checked);
         }
     };
