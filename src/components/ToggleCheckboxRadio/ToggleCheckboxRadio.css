@@ -1,0 +1,339 @@
+:root {
+    --neutralShade1: #f2f2f2;
+    --neutralShade2: #e8e9e9;
+    --neutralShade3: #d1d3d4;
+    --neutralShade4: #babdbf;
+    --neutralShade5: #808488;
+    --neutralShade6: #666a6d;
+    --neutralShade7: #4d5052;
+    --neutralShade8: #212122;
+  
+    --primaryColor: #03a9f4;
+    --primaryShade1: #e1f5fe;
+    --primaryShade4: #0288d1;
+  
+    --secondaryColor: #673ab7;
+    --secondaryShade1: #ede7f6;
+    --secondaryShade4: #512da8;
+  
+    --accentColor: #009688; /* warning */
+    --accentShade1: #e0f2f1;
+    --accentShade4: #00796b;
+  
+    --accent2Color: #8bc34a; /* success */
+    --accent2Shade1: #e7f6d5;
+    --accent2Shade4: #689f38;
+  
+    --accent3Color: #f44336; /* error */
+    --accent3Shade1: #ffdde0;
+    --accent3Shade4: #d32f2f;
+  
+    --backgroundColor: #fff;
+    --foregroundColor: #111;
+    --borderRadius: 6px;
+  }
+  
+  /* Base Styles */
+  .control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .control-label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--neutralShade7);
+  }
+  
+  .control-helper-text {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--neutralShade5);
+  }
+  
+  .control-full-width {
+    width: 100%;
+  }
+  
+  /* Toggle Button Styles */
+  .toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--neutralShade3);
+    border-radius: 34px;
+    transition: .4s;
+  }
+  
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--backgroundColor);
+    border-radius: 50%;
+    transition: .4s;
+  }
+  
+  .toggle-input:checked + .toggle-slider {
+    background-color: var(--primaryColor);
+  }
+  
+  .toggle-input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-input:disabled + .toggle-slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Checkbox Styles */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--backgroundColor);
+    border: 2px solid var(--neutralShade3);
+    border-radius: var(--borderRadius);
+  }
+  
+  .checkbox-container:hover .checkbox-input ~ .checkbox-checkmark {
+    border-color: var(--neutralShade4);
+  }
+  
+  .checkbox-input:checked ~ .checkbox-checkmark {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+  
+  .checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-input:checked ~ .checkbox-checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkbox-checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .checkbox-label {
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  
+  /* Radio Button Styles */
+  .radio-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--backgroundColor);
+    border: 2px solid var(--neutralShade3);
+    border-radius: 50%;
+  }
+  
+  .radio-container:hover .radio-input ~ .radio-checkmark {
+    border-color: var(--neutralShade4);
+  }
+  
+  .radio-input:checked ~ .radio-checkmark {
+    background-color: var(--backgroundColor);
+    border-color: var(--primaryColor);
+  }
+  
+  .radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .radio-input:checked ~ .radio-checkmark:after {
+    display: block;
+  }
+  
+  .radio-container .radio-checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+  }
+  
+  .radio-label {
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  
+  /* Variant Styles */
+  .control-primary .toggle-input:checked + .toggle-slider,
+  .control-primary .checkbox-input:checked ~ .checkbox-checkmark,
+  .control-primary .radio-input:checked ~ .radio-checkmark:after {
+    background-color: var(--primaryColor);
+  }
+  
+  .control-secondary .toggle-input:checked + .toggle-slider,
+  .control-secondary .checkbox-input:checked ~ .checkbox-checkmark,
+  .control-secondary .radio-input:checked ~ .radio-checkmark:after {
+    background-color: var(--secondaryColor);
+  }
+  
+  .control-success .toggle-input:checked + .toggle-slider,
+  .control-success .checkbox-input:checked ~ .checkbox-checkmark,
+  .control-success .radio-input:checked ~ .radio-checkmark:after {
+    background-color: var(--accent2Color);
+  }
+  
+  .control-error .toggle-input:checked + .toggle-slider,
+  .control-error .checkbox-input:checked ~ .checkbox-checkmark,
+  .control-error .radio-input:checked ~ .radio-checkmark:after {
+    background-color: var(--accent3Color);
+  }
+  
+  .control-warning .toggle-input:checked + .toggle-slider,
+  .control-warning .checkbox-input:checked ~ .checkbox-checkmark,
+  .control-warning .radio-input:checked ~ .radio-checkmark:after {
+    background-color: var(--accentColor);
+  }
+  
+  /* Size Styles */
+  .control-sm .toggle-container {
+    width: 36px;
+    height: 20px;
+  }
+  
+  .control-sm .toggle-slider:before {
+    height: 14px;
+    width: 14px;
+  }
+  
+  .control-sm .checkbox-checkmark,
+  .control-sm .radio-checkmark {
+    height: 16px;
+    width: 16px;
+  }
+  
+  .control-sm .checkbox-container .checkbox-checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+  }
+  
+  .control-sm .radio-container .radio-checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .control-lg .toggle-container {
+    width: 60px;
+    height: 30px;
+  }
+  
+  .control-lg .toggle-slider:before {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .control-lg .checkbox-checkmark,
+  .control-lg .radio-checkmark {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .control-lg .checkbox-container .checkbox-checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+  }
+  
+  .control-lg .radio-container .radio-checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Disabled State */
+  .control-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .control-disabled .toggle-container,
+  .control-disabled .checkbox-container,
+  .control-disabled .radio-container {
+    cursor: not-allowed;
+  }

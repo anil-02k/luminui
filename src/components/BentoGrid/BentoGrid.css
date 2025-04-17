@@ -1,0 +1,94 @@
+/* Base styles */
+.bento-grid {
+    --columns: 4;
+    --gap: 1rem;
+    
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--gap);
+    width: 100%;
+  }
+  
+  .bento-card {
+    --span: 1;
+    --background: transparent;
+    
+    position: relative;
+    grid-column: span var(--span);
+    background: var(--background);
+    border-radius: calc(var(--border-radius) * 2);
+    padding: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+  }
+  
+  /* Variant-specific styles */
+  .bento-card-cloud {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .bento-card-logo {
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+  }
+  
+  .bento-card-device {
+    background: linear-gradient(135deg, #f1f8e9 0%, #dce775 100%);
+  }
+  
+  .bento-card-inbox {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
+  }
+  
+  .bento-card-ai-gen {
+    background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%);
+  }
+  
+  /* Card content styles */
+  .bento-card-description {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .bento-card-description h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--gray-900);
+  }
+  
+  .bento-card-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  
+  .bento-card-details {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .bento-grid {
+      --columns: 2;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .bento-grid {
+      --columns: 1;
+    }
+    
+    .bento-card {
+      grid-column: span 1 !important;
+    }
+  }

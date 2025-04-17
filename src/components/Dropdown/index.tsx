@@ -1,45 +1,65 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Dropdown.css';
 
+export type DropdownVariant = 'slate' | 'green' | 'blue' | 'yellow' | 'black';
+export type DropdownShape = 'rounded' | 'semi-square' | 'default';
+
 export interface DropdownProps {
-  options: string[];
-  onSelect: (option: string) => void;
-  label?: string;
+  options: Array<{
+    value: string;
+    label: string;
+    disabled?: boolean;
+  }>;
+  variant?: DropdownVariant;
+  shape?: DropdownShape;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  className?: string;
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, label }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+export const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  variant = 'slate',
+  shape = 'default',
+  placeholder = 'Select an option',
+  value,
+  onChange,
+  className = ''
+}) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    onChange?.(e.target.value);
   };
 
-  const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
-    onSelect(option);
-    setIsOpen(false);
-  };
+  const dropdownClasses = [
+    'styled-dropdown',
+    variant,
+    shape !== 'default' ? shape : '',
+    className
+  ].filter(Boolean).join(' ');
 
   return (
-    <div className="dropdown">
-      {label && <label className="dropdown-label">{label}</label>}
-      <div className="dropdown-toggle" onClick={toggleDropdown}>
-        {selectedOption || 'Select an option'}
-      </div>
-      {isOpen && (
-        <div className="dropdown-menu">
-          {options.map((option) => (
-            <div
-              key={option}
-              className="dropdown-option"
-              onClick={() => handleOptionClick(option)}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
-      )}
+    <div className={dropdownClasses}>
+      <select 
+        value={value}
+        onChange={handleChange}
+        className="dropdown-select"
+      >
+        {placeholder && (
+          <option value="" disabled>
+            {placeholder}
+          </option>
+        )}
+        {options.map((option) => (
+          <option 
+            key={option.value} 
+            value={option.value}
+            disabled={option.disabled}
+          >
+            {option.label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };

@@ -1,0 +1,130 @@
+:root {
+    --neutralShade1: #f2f2f2;
+    --neutralShade2: #e8e9e9;
+    --neutralShade3: #d1d3d4;
+    --neutralShade4: #babdbf;
+    --neutralShade5: #808488;
+    --neutralShade6: #666a6d;
+    --neutralShade7: #4d5052;
+    --neutralShade8: #212122;
+  
+    --primaryColor: #03a9f4;
+    --secondaryColor: #673ab7;
+    --accentColor: #009688; /* warning */
+    --accent2Color: #8bc34a; /* success */
+    --accent3Color: #f44336; /* error */
+  
+    --backgroundColor: #fff;
+    --foregroundColor: #111;
+    --borderRadius: 6px;
+  }
+
+/* Base Styles */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .input-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--neutralShade7);
+  }
+  
+  .input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--neutralShade3);
+    border-radius: var(--borderRadius);
+    background-color: var(--backgroundColor);
+    color: var(--foregroundColor);
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  .input:focus {
+    border-color: var(--primaryColor);
+    box-shadow: 0 0 0 2px rgba(3, 169, 244, 0.2);
+  }
+  
+  .input::placeholder {
+    color: var(--neutralShade4);
+    opacity: 1;
+  }
+  
+  .input-full-width {
+    width: 100%;
+  }
+  
+  /* Variants */
+  .input-default {
+    border-color: var(--neutralShade3);
+  }
+  
+  .input-primary {
+    border-color: var(--primaryColor);
+  }
+  
+  .input-secondary {
+    border-color: var(--secondaryColor);
+  }
+  
+  .input-success {
+    border-color: var(--accent2Color);
+  }
+  
+  .input-error {
+    border-color: var(--accent3Color);
+  }
+  
+  .input-warning {
+    border-color: var(--accentColor);
+  }
+  
+  .input-info {
+    border-color: var(--accent3Color);
+  }
+  
+  /* Sizes */
+  .input-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .input-md {
+    padding: 0.75rem 1rem;
+  }
+  
+  .input-lg {
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+  }
+  
+  /* Helper Text */
+  .input-helper-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--neutralShade5);
+  }
+  
+  /* Error State */
+  .input-error + .input-helper-text {
+    color: var(--accent3Color);
+  }
+  
+  /* Success State */
+  .input-success + .input-helper-text {
+    color: var(--accent2Shade4);
+  }
+  
+  /* Disabled State */
+  .input:disabled {
+    background-color: var(--neutralShade1);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }

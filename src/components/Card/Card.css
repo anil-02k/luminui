@@ -1,0 +1,106 @@
+/* Base Styles */
+.card {
+    height: 400px;
+    width: 300px;
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0,0,0,.7);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: scale(0.8);
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 60px rgba(0,0,0,.7);
+  }
+  
+  /* Variant Backgrounds */
+  .card.japan {
+    background-image: url('https://www.kayak.co.uk/news/wp-content/uploads/sites/5/2022/12/DEST_JAPAN_FUJI-MOUNTAIN_GettyImages-822273028.jpg');
+  }
+  
+  .card.spain {
+    background-image: url('https://static.independent.co.uk/2024/11/27/16/iStock-875273240.jpg');
+  }
+  
+  .card.india {
+    background-image: url('https://h2.gifposter.com/bingImages/TajMahalReflection_1920x1080.jpg');
+  }
+  
+  .card.default {
+    background-image: url('https://images.unsplash.com/photo-1503917988258-f87a78e3c995');
+  }
+  
+  /* Title Styles */
+  .card-title {
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    text-shadow: 0 0 20px black;
+    font-size: 90px;
+    margin: 0;
+    margin-top: 20px;
+    z-index: 2;
+  }
+  
+  /* Bottom Section */
+  .card-bottom {
+    height: 200px;
+    width: 100%;
+    background-image: linear-gradient(
+      rgba(0,0,0,.0), 
+      rgba(0,0,0,.6), 
+      rgba(0,0,0,.9), 
+      rgba(0,0,0,.9), 
+      rgba(0,0,0,.9)
+    );
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    place-items: end;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: space-between;
+    z-index: 2;
+  }
+ 
+  
+  
+  
+  
+  /* Text Styles */
+  .card-text {
+    width: 100%;
+    height: 110px;
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  .card-text p {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    opacity: 1;
+  }
+  
+  .card-line {
+    width: 100%;
+    height: 3px;
+    margin: 8px 0px;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0), white, rgba(0,0,0,0));
+  }
+  
+  .card-button {
+    width: 145px;
+    margin-top: 10px;
+  }
