@@ -1,6 +1,6 @@
-# LuminUI_4bit
+# LuminUI_4bits
 
-LuminUI_4bit is a lightweight, responsive CSS framework that provides a flexible grid system and utility classes for building modern web applications.
+LuminUI_4bits is a lightweight, responsive CSS framework that provides a flexible grid system and utility classes for building modern web applications.
 
 ## Features
 
@@ -14,34 +14,35 @@ LuminUI_4bit is a lightweight, responsive CSS framework that provides a flexible
 
 ### CDN
 
-Add the LuminUI_4bit CSS file to your HTML:
+Add the LuminUI_4bits CSS file to your HTML:
 
 html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminui_4bit@1.0.0/dist/luminui_4bit.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminui_4bits@1.0.0/dist/luminui_4bits.min.css">
 
 
 ### NPM
 
 bash
-npm install luminui_4bit
+npm install luminui_4bits
 
 
 Then import the CSS in your project:
 
 javascript
-import 'luminui_4bit/dist/luminui_4bit.min.css';
+import 'luminui_4bits/dist/luminui_4bits.min.css';
+import 'luminui/dist/index.css';
 
 
 ## Components
 
-LuminUI_4bit provides a set of React components to help you build your UI faster:
+LuminUI_4bits provides a set of React components to help you build your UI faster:
 
 ### Alert
 
 Display important messages to users.
 
 jsx
-import { Alert } from 'luminui_4bit';
+import { Alert } from 'luminui_4bits';
 
 function App() {
   return (
@@ -55,7 +56,7 @@ function App() {
 Create modern, card-based layouts with the BentoGrid component.
 
 jsx
-import { BentoGrid, BentoCard } from 'luminui_4bit';
+import { BentoGrid, BentoCard } from 'luminui_4bits';
 
 function App() {
   return (
@@ -73,7 +74,7 @@ function App() {
 Versatile button component with multiple variants and sizes.
 
 jsx
-import { Button } from 'luminui_4bit';
+import { Button } from 'luminui_4bits';
 
 function App() {
   return (
@@ -91,7 +92,7 @@ function App() {
 Display content in a contained, well-defined space.
 
 jsx
-import { Card } from 'luminui_4bit';
+import { Card } from 'luminui_4bits';
 
 function App() {
   return (
@@ -107,7 +108,7 @@ function App() {
 Create dropdown menus for navigation or actions.
 
 jsx
-import { Dropdown } from 'luminui_4bit';
+import { Dropdown } from 'luminui_4bits';
 
 function App() {
   return (
@@ -125,7 +126,7 @@ function App() {
 Form input components for collecting user data.
 
 jsx
-import { Input } from 'luminui_4bit';
+import { Input } from 'luminui_4bits';
 
 function App() {
   return (
@@ -143,7 +144,7 @@ function App() {
 Display product information in a card format.
 
 jsx
-import { ProductCard } from 'luminui_4bit';
+import { ProductCard } from 'luminui_4bits';
 
 function App() {
   return (
@@ -162,7 +163,7 @@ function App() {
 Form controls for user input.
 
 jsx
-import { Toggle, Checkbox, Radio } from 'luminui_4bit';
+import { Toggle, Checkbox, Radio } from 'luminui_4bits';
 
 function App() {
   return (
@@ -178,7 +179,7 @@ function App() {
 
 ## Grid System
 
-LuminUI_4bit provides a flexible, responsive grid system that allows you to create layouts for all screen sizes.
+LuminUI_4bits provides a flexible, responsive grid system that allows you to create layouts for all screen sizes.
 
 ### Basic Structure
 
@@ -199,7 +200,7 @@ html
 
 ### Responsive Breakpoints
 
-LuminUI_4bit includes five breakpoints for responsive design:
+LuminUI_4bits includes five breakpoints for responsive design:
 
 | Breakpoint | Class Prefix | Min Width | Description |
 |------------|--------------|-----------|-------------|
@@ -229,7 +230,7 @@ html
 
 ### Grid Alignment
 
-LuminUI_4bit provides utility classes for aligning grid items:
+LuminUI_4bits provides utility classes for aligning grid items:
 
 #### Justify Content
 
@@ -383,7 +384,7 @@ css
 
 ## Browser Support
 
-LuminUI_4bit is compatible with all modern browsers:
+LuminUI_4bits is compatible with all modern browsers:
 
 - Chrome (latest)
 - Firefox (latest)
@@ -393,7 +394,7 @@ LuminUI_4bit is compatible with all modern browsers:
 
 ## Documentation
 
-For more detailed documentation, visit our [documentation site](https://luminui_4bit.com/docs).
+For more detailed documentation, visit our [documentation site](https://luminui_4bits.com/docs).
 
 ## Contributing
 
@@ -401,4 +402,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-LuminUI_4bit is licensed under the MIT License - see the LICENSE file for details.
+LuminUI_4bits is licensed under the MIT License - see the LICENSE file for details.
