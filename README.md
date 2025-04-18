@@ -1,16 +1,14 @@
-
-```markdown
 # LuminUI_4bits
 
 LuminUI_4bits is a lightweight, responsive CSS framework that provides a flexible grid system and utility classes for building modern web applications.
 
 ## Features
 
-- **Responsive Grid System**: Create layouts for all screen sizes with a 12-column grid
-- **Utility Classes**: Quickly style elements with spacing, alignment, and other utility classes
-- **No JavaScript Dependencies**: Pure CSS implementation for better performance
-- **Customizable**: Easily customize variables to match your design system
-- **React Components**: Ready-to-use React components for common UI patterns
+- **Responsive Grid System**: Create layouts for all screen sizes with a 12-column grid  
+- **Utility Classes**: Quickly style elements with spacing, alignment, and other utility classes  
+- **No JavaScript Dependencies**: Pure CSS implementation for better performance  
+- **Customizable**: Easily customize variables to match your design system  
+- **React Components**: Ready-to-use React components for common UI patterns  
 
 ## Installation
 
@@ -162,11 +160,11 @@ All spacing utilities are based on a spacing unit of `0.25rem` (4px) with a 5-st
 </div>
 ```
 
-## Components
+# Components
 
 LuminUI_4bits provides a set of React components to help you build your UI faster:
 
-# CSS Grid System 
+## CSS Grid System 
 
 ## Overview
 
@@ -255,24 +253,9 @@ Each breakpoint supports columns 1-12 (e.g., `.column-md-6` for a half-width col
 </div>
 ```
 
-## Customization
-
-Modify these CSS variables to customize the grid:
-
-```css
-:root {
-  --grid-gutter: 1rem;         /* Default gutter spacing */
-  --container-max-width: 1100px; /* Max width of grid container */
-  --column-margin: 1rem;       /* Bottom margin between columns */
-}
-```
 
 
-
-
-```markdown
 ### Alert
-
 Display contextual feedback messages with multiple variants and customization options.
 
 #### Basic Usage
@@ -372,9 +355,6 @@ function App() {
 }
 ```
 
-Here's the comprehensive `Button` section for your `README.md` file, based on the provided component implementation:
-
-```markdown
 ### Button
 
 A highly customizable button component with multiple variants, sizes, and shapes.
@@ -481,21 +461,6 @@ function App() {
 </Button>
 ```
 
-#### CSS Structure
-
-The button uses these CSS classes that you can override:
-- `.btn`: Base button style
-- `.btn-{variant}`: Solid variant styles (e.g., `.btn-primary`)
-- `.btn-outline-{variant}`: Outline variant styles
-- `.btn-{size}`: Size classes (e.g., `.btn-sm`)
-- `.btn-{shape}`: Shape classes (e.g., `.btn-pill`)
-- `.btn-full`: Full-width modifier
-- `.btn-loading`: Loading state modifier
-- `.btn-spinner`: Loading spinner element
-
-```
-
-```markdown
 ### BentoGrid
 
 Create modern, Pinterest-style card layouts with customizable columns and spacing.
@@ -947,8 +912,6 @@ The component uses a comprehensive CSS class system:
   - Checkbox: `.checkbox-container`, `.checkbox-input`, `.checkbox-checkmark`, `.checkbox-label`
   - Radio: `.radio-container`, `.radio-input`, `.radio-checkmark`, `.radio-label`
   - Shared: `.control-label`, `.control-helper-text`
-
-
 
 
 ## Browser Support
